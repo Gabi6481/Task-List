@@ -1,0 +1,72 @@
+main {
+  margin: 1rem;
+}
+main h1 {
+  text-align: center;
+}
+
+main section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    margin:3%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.row img{
+    margin:15px 20px;
+}
+
+
+
+
+/* Assigning general property to card  */
+.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  /*  Assigning properties to inner
+        content of card  */
+  .card__inner {
+    background-color: rgba(0, 0, 0, 0.582);
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    opacity: 0;
+    padding: 2rem 1.3rem 2rem 2rem;
+    transition: all 0.4s ease 0s;
+    border-radius: 20px;
+    width:100%;
+    height: 100%;
+  }
+
+  /*  On hovering card opacity
+        of content must be 1*/
+  .card:hover .card__inner {
+    opacity: 1;
+  }
+
+  /*  General property for heading
+        and paragraph*/
+  .card__inner h2 {
+    margin-top: 1rem;
+    color: #cca525;
+  }
+
+  .card__inner p {
+    overflow-y: scroll;
+    height: 87%;
+    padding-right: 1rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    margin-top: 1.5rem;
+  }
